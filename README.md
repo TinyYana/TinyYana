@@ -1,5 +1,5 @@
 # 💫About Me :
-A newbie Java developer.
+A novice developer. Also the owner of the Discord community "彼岸花". And ACG theme blog article creator.
 
 ## 🌐Socials
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](htttps://discord.gg/sm8rfTGGqh) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/TinyYana_OuO) 
