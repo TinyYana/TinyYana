@@ -26,5 +26,5 @@
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=tinyyana&" alt="tinyyana" /></p>
 
-<img src="https://count.getloli.com/get/@:name" alt=":tinyyana" />
+<img src="https://count.getloli.com/get/@tinyyana" alt=":tinyyana" />
 
