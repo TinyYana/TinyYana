@@ -25,3 +25,6 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=tinyyana&show_icons=true&locale=en" alt="tinyyana" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=tinyyana&" alt="tinyyana" /></p>
+
+<img src="https://count.getloli.com/get/@:name" alt=":tinyyana" />
+
