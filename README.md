@@ -9,7 +9,7 @@
 
 - 🌱 I’m currently learning **Typescript（JavaScript）, Nuxt.js, C#, Electron**
 
-- 📫 How to reach me **tinyyana.moe@gmail.com**
+- 📫 How to reach me **admin@tinyyana.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
