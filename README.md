@@ -9,7 +9,7 @@
 
 - 🌱 I’m currently learning **flask, react native, linux, docker**
 
-- 📝 I regularly write articles on [https://blog.tinyyana.com](https://blog.tinyyana.com)
+- 📝 My blog post some anime stuff [https://blog.tinyyana.com](https://blog.tinyyana.com)
 
 - 📫 How to reach me **admin@tinyyana.com**
 
