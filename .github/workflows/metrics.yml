@@ -25,7 +25,7 @@ jobs:
 
           # === 程式語言相關 ===
           plugin_languages: yes
-          plugin_languages_ignored: html, css
+          plugin_languages_ignored: html, css, scss
           plugin_languages_threshold: 1%
 
           # === 追蹤狀態（活躍程度） ===
@@ -44,5 +44,5 @@ jobs:
           plugin_isocalendar_duration: full-year
 
           # === 額外美化參數 ===
-          template: classic
+          template: repository
           # config_padding: 8%
