@@ -1,65 +1,62 @@
-name: GitHub Metrics
+name: Metrics
 on:
-  push:                  # 每次 push 時重跑
-  schedule:              # 每天 UTC 00:00 定期更新
-    - cron: '0 0 * * *'
-  workflow_dispatch:     # 手動可觸發
+  schedule: [{ cron: "0 */8 * * *" }]    # 每 8 小時更新一次
+  workflow_dispatch:                    # 手動觸發
+  push:                                 # 每次 push 到 main 分支時觸發
+    branches: ["main"]
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    if: github.actor != 'github-actions[bot]'
-
+    if: github.actor != 'github-actions[bot]'  # 避免自我觸發
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          filename: metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # —— 全局設定 —— 
-          base: header, activity, streaks, calendar, languages, wakatime, anilist, achievements, community, repositories, metadata
-          config_timezone: Asia/Taipei
-          config_twemoji: yes
-          config_display: columns
-          config_order: header, activity, streaks, calendar, languages, wakatime, anilist, achievements, community, repositories, metadata
+          # === 使用者資訊 ===
+          user: TinyYana
           template: classic
-          config_padding: 8%
+          base: header, activity, community, repositories, metadata
+          base_hireable: yes
+          config_octicon: yes
+          config_twemoji: yes
+          config_timezone: Asia/Taipei
+          config_display: columns
+          config_order: base, languages, anilist, wakatime, achievements, isocalendar, traffic
 
-          # —— Activity 相關 —— 
-          plugin_languages: yes
-          plugin_languages_ignored: html, css
-          plugin_languages_threshold: 1%
-          plugin_followup: yes
-          plugin_lines: yes
-
-          # —— 社群 & Repo —— 
-          plugin_orgs: yes
-          plugin_stars: yes
-          plugin_forks: yes
-          plugin_sponsoring: yes
-          plugin_following: yes
-          plugin_repos: yes
-          plugin_repos_contributed: yes
-          plugin_prs_reviewed: yes
-          plugin_prs_opened: yes
-          plugin_issues_opened: yes
-          plugin_issue_comments: yes
-          plugin_views: yes     # 近兩週瀏覽量
-
-          # —— Streaks & Calendar —— 
-          plugin_contributions_calendar: yes
-          plugin_commits_streak: yes
-          plugin_commits_per_day: yes
-
-          # —— Achievements —— 
+          # === 成就顯示 ===
           plugin_achievements: yes
-          plugin_achievements_threshold: C
-          plugin_achievements_display: detailed
+          plugin_achievements_display: compact
           plugin_achievements_secrets: yes
-          plugin_achievements_limit: 20
+          plugin_achievements_threshold: A
+          plugin_achievements_limit: 6
 
-          # —— isocalendar ——
+          # === 貢獻日曆（週數分布） ===
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          plugin_isocalendar_duration: half-year
+
+          # === 語言分析 ===
+          plugin_languages: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_analysis_timeout_repositories: 7.5
+          plugin_languages_categories: markup, programming
+          plugin_languages_colors: github
+          plugin_languages_ignored: Mathematica, Jupyter Notebook, Starlark, BibTeX Style, Tex, Shell
+          plugin_languages_limit: 8
+          plugin_languages_recent_categories: markup, programming
+          plugin_languages_recent_days: 14
+          plugin_languages_recent_load: 300
+          plugin_languages_sections: most-used
+          plugin_languages_threshold: 0%
+
+          # === 增加/刪除行數統計 ===
+          plugin_lines: yes
+          plugin_lines_history_limit: 1
+          plugin_lines_repositories_limit: 4
+          plugin_lines_sections: base
+
+          # === GitHub 流量統計 ===
+          plugin_traffic: yes
