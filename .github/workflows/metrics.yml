@@ -1,41 +1,65 @@
 name: GitHub Metrics
 on:
-  push:
-  schedule: [{cron: "0 0 * * *"}] # 每天自動執行
-  workflow_dispatch:
+  push:                  # 每次 push 時重跑
+  schedule:              # 每天 UTC 00:00 定期更新
+    - cron: '0 0 * * *'
+  workflow_dispatch:     # 手動可觸發
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: github.actor != 'github-actions[bot]'
+
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # 輸出檔名
           filename: metrics.svg
-
-          # 權杖
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # === 基本 GitHub 個人資料顯示 ===
-          base: header, activity, community, repositories, metadata
+          # —— 全局設定 —— 
+          base: header, activity, streaks, calendar, languages, wakatime, anilist, achievements, community, repositories, metadata
           config_timezone: Asia/Taipei
           config_twemoji: yes
           config_display: columns
-          config_order: base, languages, anilist, achievements
+          config_order: header, activity, streaks, calendar, languages, wakatime, anilist, achievements, community, repositories, metadata
+          template: classic
+          config_padding: 8%
 
-          # === 程式語言相關 ===
+          # —— Activity 相關 —— 
           plugin_languages: yes
-          plugin_languages_ignored: html, css, scss
+          plugin_languages_ignored: html, css
           plugin_languages_threshold: 1%
-
-          # === 追蹤狀態（活躍程度） ===
           plugin_followup: yes
           plugin_lines: yes
 
-          # === isocalendar ===
+          # —— 社群 & Repo —— 
+          plugin_orgs: yes
+          plugin_stars: yes
+          plugin_forks: yes
+          plugin_sponsoring: yes
+          plugin_following: yes
+          plugin_repos: yes
+          plugin_repos_contributed: yes
+          plugin_prs_reviewed: yes
+          plugin_prs_opened: yes
+          plugin_issues_opened: yes
+          plugin_issue_comments: yes
+          plugin_views: yes     # 近兩週瀏覽量
+
+          # —— Streaks & Calendar —— 
+          plugin_contributions_calendar: yes
+          plugin_commits_streak: yes
+          plugin_commits_per_day: yes
+
+          # —— Achievements —— 
+          plugin_achievements: yes
+          plugin_achievements_threshold: C
+          plugin_achievements_display: detailed
+          plugin_achievements_secrets: yes
+          plugin_achievements_limit: 20
+
+          # —— isocalendar ——
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-
-          # === 額外美化參數 ===
-          template: classic
-          # config_padding: 8%
