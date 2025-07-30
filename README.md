@@ -1,4 +1,5 @@
 ![Metrics](./metrics.svg)
+![Metrics](./github-metrics.svg)
 <h1 align="center">Hi 👋, I'm TinyYana</h1>
 <h3 align="center">A casual developer. Just coding for fun.</h3>
 
