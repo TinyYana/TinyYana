@@ -12,7 +12,7 @@
 
 - 🎓 Information Management student
 - 💻 Currently building things with **Node.js, Next.js, TypeScript, and React Native**
-- 🌱 Learning **Next.js, Linux, Docker**
+- 🌱 Learning **Go, Next.js, Linux, Docker**
 - 📫 Reach me at: **admin@tinyyana.com**
 
 ### 🛠️ Languages and Tools
