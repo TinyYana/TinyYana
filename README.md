@@ -1,6 +1,6 @@
 # Hi 👋, I'm TinyYana
 
-**A casual developer. Just coding for fun.**
+**Information Management student · building tools that people actually use.**
 
 [![Profile Views](https://komarev.com/ghpvc/?username=tinyyana&label=Views&color=0e75b6&style=flat)](https://github.com/tinyyana)
 [![Twitter Follow](https://img.shields.io/twitter/follow/tinyyana_owo?style=flat&logo=x&color=black)](https://twitter.com/tinyyana_owo)
@@ -10,14 +10,16 @@
 
 ### 👨‍💻 About Me
 
-- 🎓 Information Management student
-- 💻 Currently building things with **Node.js, Next.js, TypeScript, and React Native**
-- 🌱 Learning **Go, Next.js, Linux, Docker**
-- 📫 Reach me at: **admin@tinyyana.com**
+- 🎓 Information Management student, often taking the technical lead in small teams
+- 💻 Core stack: **Node.js + TypeScript** — backends, Discord bots, and full-stack web apps
+- 🤖 Building an **AI agent toolkit** with shared Codex skills and core rules for my own development workflow
+- 🌸 Running **彼岸花**, an ACG Discord community with around 1,900 members
+- 🌱 Next up: getting into **Rust** and **Go**
+- 📫 Reach me at: [admin@tinyyana.com](mailto:admin@tinyyana.com)
 
 ### 🛠️ Languages and Tools
 
-`TypeScript` `JavaScript` `Node.js` `Next.js` `React Native` `Python` `Docker` `Git`
+`TypeScript` `JavaScript` `Node.js` `Astro` `React Native` `Fastify` `discord.js` `SQLite` `Python` `Docker` `Git`
 
 ### 📊 GitHub Stats
 
