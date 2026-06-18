@@ -4,7 +4,7 @@
 
 [![Profile Views](https://komarev.com/ghpvc/?username=tinyyana&label=Views&color=0e75b6&style=flat)](https://github.com/tinyyana)
 [![Twitter Follow](https://img.shields.io/twitter/follow/tinyyana_owo?style=flat&logo=x&color=black)](https://twitter.com/tinyyana_owo)
-[![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=flat&logo=discord)](https://discord.gg/sm8rfTGGqh)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=flat&logo=discord)](https://discord.gg/nMAz72MUxv)
 
 ---
 
